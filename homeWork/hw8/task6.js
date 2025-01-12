@@ -8,5 +8,5 @@ const sortedNumbers = [...numbersList];
 sortedNumbers.sort((a, b) => a - b);
 
 // Виведення обох масивів у консоль
-console.log("Вихідний масив:", numbersList);
-console.log("Відсортований масив:", sortedNumbers);
+console.log('Вихідний масив:', numbersList);
+console.log('Відсортований масив:', sortedNumbers);
