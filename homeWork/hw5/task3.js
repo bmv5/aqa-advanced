@@ -8,5 +8,5 @@ const number = 5;
 // Генерація таблиці множення за допомогою циклу for
 console.log(`Таблиця множення для числа ${number}:`);
 for (let i = 1; i <= 10; i++) {
-    console.log(`${number} x ${i} = ${number * i}`);
+  console.log(`${number} x ${i} = ${number * i}`);
 }

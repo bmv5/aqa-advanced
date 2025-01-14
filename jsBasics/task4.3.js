@@ -4,8 +4,6 @@
 //Обчисліть об'єм циліндра за формулою π * radius^2 * height і виведіть результат.
 //Округліть кожне отримане значення до 2 значень після крапки
 
-
-
 const radius = 5; // значення радіуса
 const height = 10; // значення висоти
 
@@ -15,4 +13,6 @@ const volume = Math.PI * Math.pow(radius, 2) * height;
 // Округлення об'єму до 2 знаків після коми
 const roundedVolume = volume.toFixed(2);
 
-console.log(`Об'єм циліндра з радіусом ${radius} і висотою ${height} дорівнює ${roundedVolume}`);
+console.log(
+  `Об'єм циліндра з радіусом ${radius} і висотою ${height} дорівнює ${roundedVolume}`,
+);

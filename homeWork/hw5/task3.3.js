@@ -4,6 +4,6 @@ let number = 7; // Число, для якого генеруємо таблиц
 let i = 1;
 
 while (i <= 10) {
-    console.log(`${number} * ${i} = ${number * i}`);
-    i++; // Збільшуємо лічильник
+  console.log(`${number} * ${i} = ${number * i}`);
+  i++; // Збільшуємо лічильник
 }

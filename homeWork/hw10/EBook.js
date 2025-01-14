@@ -15,31 +15,40 @@ class EBook extends Book {
   set fileFormat(value) {
     const validFormats = ['PDF', 'EPUB', 'MOBI', 'TXT']; // Дозволені формати
     if (!validFormats.includes(value.toUpperCase())) {
-      throw new Error(`File format must be one of: ${validFormats.join(', ')}.`);
+      throw new Error(
+        `File format must be one of: ${validFormats.join(', ')}.`,
+      );
     }
     this._fileFormat = value.toUpperCase(); // Завжди зберігаємо у верхньому регістрі
   }
 
   // Перезаписуємо метод printInfo для виведення додаткової інформації про формат файлу
   printInfo() {
-    console.log(`"${this.title}" by ${this.author}, published in ${this.year}. File format: ${this.fileFormat}.`);
+    console.log(
+      `"${this.title}" by ${this.author}, published in ${this.year}. File format: ${this.fileFormat}.`,
+    );
   }
 
-   // Статичний метод для створення екземпляра EBook з Book
-   static fromBook(bookInstance, fileFormat) {
+  // Статичний метод для створення екземпляра EBook з Book
+  static fromBook(bookInstance, fileFormat) {
     if (!(bookInstance instanceof Book)) {
       throw new Error('First argument must be an instance of Book.');
     }
-    return new EBook(bookInstance.title, bookInstance.author, bookInstance.year, fileFormat);
+    return new EBook(
+      bookInstance.title,
+      bookInstance.author,
+      bookInstance.year,
+      fileFormat,
+    );
   }
 }
 
 // Створення інстансу класу EBook
-const ebook1 = new EBook("The Godfather", "Mario Puzo", 1969, "PDF");
+const ebook1 = new EBook('The Godfather', 'Mario Puzo', 1969, 'PDF');
 
 // Використання геттерів і сеттерів
-ebook1.title = "The Godfather 2"; // Змінюємо назву
-ebook1.fileFormat = "MOBI"; // Змінюємо формат файлу
+ebook1.title = 'The Godfather 2'; // Змінюємо назву
+ebook1.fileFormat = 'MOBI'; // Змінюємо формат файлу
 
 // Виклик методу printInfo
 ebook1.printInfo(); // "The Godfather 2" by Mario Puzo, published in 1969 . File format: MOBI.
